@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "82310794926",
+    "project_id": "tuesday-todo-app",
+    "storage_bucket": "tuesday-todo-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:82310794926:android:6691a31d9735edfc99673f",
+        "android_client_info": {
+          "package_name": "com.example.tuesday_todo_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "82310794926-0qo5mrebtsjaripoigrg02lebg7vmrru.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDa_RiES6kKRyYQEOpjj51Ckn1Pbace4OI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "82310794926-0qo5mrebtsjaripoigrg02lebg7vmrru.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
