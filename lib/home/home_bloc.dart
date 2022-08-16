@@ -11,8 +11,7 @@ class HomeBloc {
   //   Item(title: "mahmoud", desc: "Failed")
   // ];
 
-  final CollectionReference todo =
-      FirebaseFirestore.instance.collection('todo');
+  final CollectionReference todo = FirebaseFirestore.instance.collection('todo');
 
   TextEditingController titleController = TextEditingController();
   TextEditingController descController = TextEditingController();
@@ -22,13 +21,22 @@ class HomeBloc {
   }
 
   addItemToFireStore({required String title, required String desc}) async {
-    await todo.add({"title": title, "desc": desc});
+    await todo.add({"title": title, "desc": desc, "note status": "inprogress", "date": DateTime.now().toString()});
   }
 
-  updateItemOnFireStore(
-      {required String documentID,
-      required String title,
-      required String desc}) async {
-    await todo.doc(documentID).update({"title": title, "desc": desc});
+  updateItemOnFireStore({required String documentID, required String title, required String desc}) async {
+    await todo
+        .doc(documentID)
+        .update({"title": title, "desc": desc, "note status": "inprogress", "date": DateTime.now().toString()});
+  }
+
+  changeNoteStatusToDone({required String documentID, required String title, required String desc}) async {
+    await todo.doc(documentID).update({"title": title, "desc": desc, "note status": "done", "date": DateTime.now().toString()});
+  }
+
+  changeNoteStatusToInProgress({required String documentID, required String title, required String desc}) async {
+    await todo
+        .doc(documentID)
+        .update({"title": title, "desc": desc, "note status": "inprogress", "date": DateTime.now().toString()});
   }
 }
